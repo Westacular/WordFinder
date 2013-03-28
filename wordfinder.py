@@ -104,10 +104,10 @@ def main(arguments=None):
     if args.dictionary:
         t.read_dictionary_from(args.dictionary)
 
-    t.available_letters  = args.available
-    t.limited_letters    = args.limited
-    t.excluded_letters   = args.exclude
-    t.included_letters   = args.include
+    t.available_letters  = args.available.lower()
+    t.limited_letters    = args.limited.lower()
+    t.excluded_letters   = args.exclude.lower()
+    t.included_letters   = args.include.lower()
     t.pattern            = args.pattern
     t.min_length         = args.min
     t.max_length         = args.max
