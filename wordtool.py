@@ -5,6 +5,7 @@
 # Copyright (c) 2012, Wesley Campaigne. All rights reserved.
 #
 
+import sys
 import re
 import os
 from collections import defaultdict
@@ -13,8 +14,8 @@ _DEFAULT_DICTIONARY_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__
 # _DEFAULT_DICTIONARY_FILE = '/usr/share/dict/words'
 
 _EMPTY_DICT = defaultdict(int, zip([chr(x) for x in range(97, 123)], [0]*26))
+_LETTER_MAX_COUNT = sys.maxint
 
-_LETTER_MAX_COUNT = 100
 _UNLIMITED_DICT = defaultdict(int, zip([chr(x) for x in range(97, 123)], [_LETTER_MAX_COUNT]*26))
 
 
